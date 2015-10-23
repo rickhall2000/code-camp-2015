@@ -1,5 +1,6 @@
 (ns tic-tac-toe.core
-  (:require [clojure.core.async :as async :refer [<! >!]]))
+  (:require [clojure.core.async :as async :refer [<! >!]]
+            [clojure.string :as str]))
 
 
 (defonce channel (async/chan (async/sliding-buffer 1)))
