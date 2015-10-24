@@ -10,9 +10,9 @@
   (println msg))
 
 (def drain-chan
-  (async/go-loop [acc 0]
+  (async/go-loop []
     (handle-message  (<! channel))
-    (recur (inc acc))))
+    (recur)))
 
 (def fill-chan
   (async/go-loop []
